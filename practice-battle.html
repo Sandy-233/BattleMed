@@ -104,7 +104,7 @@ document.getElementById("subject").innerHTML =
 "📚 " + filteredQuestions[current].subject || selectedSubject);
 
 document.getElementById("questionNumber").innerHTML =
-+filteredQuestions[current] " / " + QUESTIONS.length;
+"Question " + (current + 1) + " / " + filteredQuestions.length;
 
 document.getElementById("question").innerText =
 filteredQuestions[current].question;
