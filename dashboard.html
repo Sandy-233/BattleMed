@@ -133,7 +133,9 @@ color:#888;
   <div class="card">
 <h2><a href="pathology.html" style="color:#00ff99;text-decoration:none;">🧬 Pathology</a></h2>
 <p>General + Systemic Pathology</p>
-<div class="progress"><div class="fill"></div></div>
+<div class="progress">
+<div class="fill" id="pathologyBar"></div>
+</div>
 </div>
 
 <div class="card">
@@ -190,7 +192,8 @@ color:#888;
 <div class="card">
 <h2>🎯 NEET PG Progress</h2>
 <p>Overall syllabus completion</p>
-<div class="progress"><div class="fill" style="width:25%"></div></div>
+<div class="progress">
+    <div class="fill" id="pathologyBar"></div>
 </div>
 
 <div class="card">
@@ -205,6 +208,19 @@ color:#888;
 © 2026 Prahaas MedPrep ❤️
 
 </footer>
+<script>
+const boxes = 5;
+let completed = 0;
 
+for (let i = 0; i < boxes; i++) {
+    if (localStorage.getItem("pathology" + i) === "true") {
+        completed++;
+    }
+}
+
+let percent = (completed / boxes) * 100;
+
+document.getElementById("pathologyBar").style.width = percent + "%";
+</script>
 </body>
 </html>
