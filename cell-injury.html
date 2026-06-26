@@ -232,6 +232,227 @@ ATP depletion → Mitochondrial damage → Calcium influx → Cell death
 </p>
 
 </div> 
+  <!-- ================= CELL INJURY STUDY HUB ================= -->
+
+<div class="card">
+
+<h2>📖 Chapter Overview</h2>
+
+<p>
+
+Cell injury is one of the highest-yield topics in pathology and forms the basis for understanding inflammation, necrosis, apoptosis and systemic pathology.
+
+This chapter explains why cells get injured, how they respond and when injury becomes irreversible.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🎯 Learning Objectives</h2>
+
+<ul>
+
+<li>Understand causes of cell injury</li>
+
+<li>Differentiate reversible vs irreversible injury</li>
+
+<li>Understand ATP depletion</li>
+
+<li>Understand calcium influx</li>
+
+<li>Differentiate necrosis and apoptosis</li>
+
+<li>Know Robbins high-yield points</li>
+
+<li>Solve clinical questions confidently</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>⏱ Estimated Study Time</h2>
+
+<h1>90 Minutes</h1>
+
+<p>
+
+Notes : 40 min
+
+MCQs : 25 min
+
+Revision : 15 min
+
+PYQs : 10 min
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>📊 Chapter Progress</h2>
+
+<progress value="0" max="100" id="progressBar" style="width:100%;height:25px;"></progress>
+
+<br><br>
+
+<button onclick="completeChapter()">
+
+✅ Mark Chapter Completed
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>🔖 Bookmark</h2>
+
+<button onclick="bookmarkChapter()">
+
+⭐ Bookmark Chapter
+
+</button>
+
+<p id="bookmarkText"></p>
+
+</div>
+
+<div class="card">
+
+<h2>📋 Quick Summary Table</h2>
+
+<table border="1" width="100%" cellpadding="10">
+
+<tr>
+
+<th>Topic</th>
+
+<th>Important Point</th>
+
+</tr>
+
+<tr>
+
+<td>ATP</td>
+
+<td>Earliest biochemical change</td>
+
+</tr>
+
+<tr>
+
+<td>Mitochondria</td>
+
+<td>First organelle affected</td>
+
+</tr>
+
+<tr>
+
+<td>Cell Swelling</td>
+
+<td>Earliest reversible injury</td>
+
+</tr>
+
+<tr>
+
+<td>Necrosis</td>
+
+<td>Irreversible injury</td>
+
+</tr>
+
+<tr>
+
+<td>Apoptosis</td>
+
+<td>Programmed cell death</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>🌳 Cell Injury Flowchart</h2>
+
+<pre>
+
+Stress
+
+↓
+
+ATP Depletion
+
+↓
+
+Ion Pump Failure
+
+↓
+
+Cell Swelling
+
+↓
+
+Mitochondrial Damage
+
+↓
+
+Calcium Influx
+
+↓
+
+Free Radical Injury
+
+↓
+
+Necrosis / Apoptosis
+
+</pre>
+
+</div>
+
+<script>
+
+function completeChapter(){
+
+document.getElementById("progressBar").value=100;
+
+localStorage.setItem("cellinjury","100");
+
+alert("Chapter Completed!");
+
+}
+
+if(localStorage.getItem("cellinjury")){
+
+document.getElementById("progressBar").value=100;
+
+}
+
+function bookmarkChapter(){
+
+localStorage.setItem("bookmark_cellinjury","yes");
+
+document.getElementById("bookmarkText").innerHTML="⭐ Chapter Bookmarked";
+
+}
+
+if(localStorage.getItem("bookmark_cellinjury")){
+
+document.getElementById("bookmarkText").innerHTML="⭐ Chapter Bookmarked";
+
+}
+
+</script>
 
 </body>
 </html>
