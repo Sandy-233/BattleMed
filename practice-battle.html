@@ -164,7 +164,19 @@ document.querySelector(".card").innerHTML = `
 `;
 
 return;
+let xp = parseInt(localStorage.getItem("xp")) || 0;
+xp += QUESTIONS.length * 2;
+localStorage.setItem("xp", xp);
 
+let coins = parseInt(localStorage.getItem("coins")) || 0;
+coins += score * 10;
+localStorage.setItem("coins", coins);
+  document.getElementById("streak").innerText =
+localStorage.getItem("streak") || 0;
+
+let streak = parseInt(localStorage.getItem("streak")) || 0;
+streak++;
+localStorage.setItem("streak", streak);
 }
 
 let buttons = document.querySelectorAll(".option");
