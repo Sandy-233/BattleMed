@@ -99,9 +99,9 @@ if(selectedSubject !== "Mixed"){
 
 filteredQuestions = filteredQuestions.sort(() => Math.random() - 0.5);
 function loadQuestion(){
-
 document.getElementById("subject").innerHTML =
 "📚 " + (filteredQuestions[current].subject || selectedSubject);
+
 
 document.getElementById("questionNumber").innerHTML =
 "Question " + (current + 1) + " / " + filteredQuestions.length;
