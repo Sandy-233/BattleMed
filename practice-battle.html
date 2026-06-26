@@ -99,40 +99,40 @@ if(selectedSubject !== "Mixed"){
     filteredQuestions = QUESTIONS.filter(q => q.subject === selectedSubject);
 }
 
-QUESTIONS = filteredQuestions.sort(() => Math.random() - 0.5);
+filteredQuestions = filteredQuestions.sort(() => Math.random() - 0.5);
 function loadQuestion(){
 
 document.getElementById("subject").innerHTML =
-"📚 " + (QUESTIONS[current].subject || selectedSubject);
+"📚 " + filteredQuestions[current].subject || selectedSubject);
 
 document.getElementById("questionNumber").innerHTML =
-"Question " + (current + 1) + " / " + QUESTIONS.length;
++filteredQuestions[current] " / " + QUESTIONS.length;
 
 document.getElementById("question").innerText =
-QUESTIONS[current].question;
+filteredQuestions[current].question;
 
 document.getElementById("A").innerText =
-QUESTIONS[current].options[0];
+filteredQuestions[current].options[0];
 
 document.getElementById("B").innerText =
-QUESTIONS[current].options[1];
+  filteredQuestions[current].options[1];
 document.getElementById("C").innerText =
-QUESTIONS[current].options[2];
+filteredQuestions[current].options[2];
 
 document.getElementById("D").innerText =
-QUESTIONS[current].options[3];
+filteredQuestions[current].options[3];
 
 }
   function checkAnswer(choice){
 
-if(choice===QUESTIONS[current].correct){
+if(choice===filteredQuestions[current].correct){
     score++;
   xp += 10;
 localStorage.setItem("xp", xp);
     document.getElementById(choice).style.background="green";
 }else{
     document.getElementById(choice).style.background="red";
-    document.getElementById(QUESTIONS[current].correct).style.background="green";
+    document.getElementById(filteredQuestions[current].correct).style.background="green";
 }
 
 document.getElementById("score").innerHTML =
