@@ -110,47 +110,47 @@ font-size:20px;
 
 <div class="grid">
 
-<a href="pathology.html" class="card">
+<a href="#" class="card" onclick="startBattle('Pathology')">
 🧬<br><br>
 Pathology
 </a>
 
-<a href="pharmacology.html" class="card">
+<a href="#" class="card" onclick="startBattle('Pharmacology')">
 💊<br><br>
 Pharmacology
 </a>
 
-<a href="microbiology.html" class="card">
+<a href="#" class="card" onclick="startBattle('Microbiology')">
 🦠<br><br>
 Microbiology
 </a>
+<a href="#" class="card" onclick="startBattle('Physiology')">
 
-<a href="physiology.html" class="card">
 🫀<br><br>
 Physiology
 </a>
 
-<a href="anatomy.html" class="card">
+<a href="#" class="card" onclick="startBattle('Anatomy')">
 🦴<br><br>
 Anatomy
 </a>
 
-<a href="biochemistry.html" class="card">
+<a href="#" class="card" onclick="startBattle('Biochemistry')">
 🧪<br><br>
 Biochemistry
 </a>
 
-<a href="fmt.html" class="card">
+<a href="#" class="card" onclick="startBattle('FMT')">
 ⚖️<br><br>
 FMT
 </a>
 
-<a href="psm.html" class="card">
+<a href="#" class="card" onclick="startBattle('PSM')">
 🌍<br><br>
 PSM
 </a>
 
-<a href="#" class="card">
+<a href="#" class="card" onclick="startBattle('Mixed')">
 🎲<br><br>
 Mixed Subjects
 </a>
@@ -164,6 +164,12 @@ Mixed Subjects
 </a>
 
 </div>
+  <script>
+function startBattle(subject){
+    localStorage.setItem("battleSubject", subject);
+    window.location.href = "practice-battle.html";
+}
+  </script>
 
 </body>
 
