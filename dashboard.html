@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prahaas MedPrep Dashboard</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0b0f17;
+color:white;
+}
+
+header{
+background:#101827;
+padding:20px;
+text-align:center;
+font-size:30px;
+font-weight:bold;
+color:#00ffb3;
+}
+
+.container{
+padding:20px;
+}
+
+.card{
+background:#182231;
+padding:20px;
+margin:15px 0;
+border-radius:18px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px #00ff99;
+}
+
+h2{
+margin-bottom:10px;
+}
+
+.progress{
+background:#333;
+height:14px;
+border-radius:10px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.progress div{
+background:#00ff99;
+height:100%;
+width:0%;
+}
+
+.button{
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
+background:#00ff99;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+🏥 Prahaas MedPrep
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>👋 Welcome</h2>
+<p>Welcome to your personal NEET PG & USMLE dashboard.</p>
+</div>
+
+<div class="card">
+<h2>📚 Pathology Progress</h2>
+<p>Completed: 0%</p>
+<div class="progress">
+<div></div>
+</div>
+<a class="button" href="#">Open Pathology</a>
+</div>
+
+<div class="card">
+<h2>💊 Pharmacology</h2>
+<p>Completed: 0%</p>
+<div class="progress">
+<div></div>
+</div>
+</div>
+
+<div class="card">
+<h2>🦠 Microbiology</h2>
+<p>Completed: 0%</p>
+<div class="progress">
+<div></div>
+</div>
+</div>
+
+<div class="card">
+<h2>🎯 Today's Goal</h2>
+<p>✔ Study 2 hours</p>
+<p>✔ Solve 100 MCQs</p>
+<p>✔ Revise Pathology</p>
+</div>
+
+</div>
+
+</body>
+</html>
