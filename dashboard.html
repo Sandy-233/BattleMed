@@ -145,7 +145,6 @@ transform:scale(1.05);
 
 </style>
 
-</style>
 </head>
 
 <body>
@@ -176,9 +175,31 @@ transform:scale(1.05);
 
 <h2>⏱️ Study Timer</h2>
 
-<h1 id="timer">25:00</h1>
+<input id="hours" type="number" placeholder="Hours" min="0" value="0">
+
+<input id="minutes" type="number" placeholder="Minutes" min="0" max="59" value="25">
+<input id="hours" type="number" placeholder="Hours" min="0" value="0">
+
+<input id="minutes" type="number" placeholder="Minutes" min="0" max="59" value="25">
+
+<br><br>
+
+<button onclick="resetTimer()">Set Timer</button>
+
+<br><br>
+
+<h1 id="timer">00:25:00</h1>
 
 <button onclick="startTimer()">▶ Start</button>
+
+<button onclick="pauseTimer()">⏸ Pause</button>
+
+<button onclick="resetTimer()">🔄 Reset</button>
+<h1 id="timer">00:25:00</h1>
+
+<button onclick="startTimer()">▶ Start</button>
+
+<button onclick="pauseTimer()">⏸ Pause</button>
 
 <button onclick="resetTimer()">🔄 Reset</button>
 
@@ -333,17 +354,6 @@ Random Battle • Friend Challenge • Global Rankings
 
 </section>
 <div class="card">
-<h2>⏱️ Study Timer</h2>
-<h2 id="timer" style="font-size:40px;color:#00ff99;">25:00</h2>
-
-<button onclick="startTimer()" style="padding:12px 25px;margin:5px;">▶ Start</button>
-
-<button onclick="resetTimer()" style="padding:12px 25px;margin:5px;">🔄 Reset</button>
-
-</div>
-  </div>
-
-<div class="card">
 <h2>🎯 Today's Goal</h2>
 
 <label><input type="checkbox"> Pathology - Cell Injury</label><br><br>
@@ -373,41 +383,71 @@ document.getElementById("pathologyBar").style.width = percent + "%";
 
 /* PASTE THE TIMER CODE HERE */
 
-let time = 25 * 60;
-let interval;
+let time = parseInt(localStorage.getItem("timerTime")) || 0;;
+let interval = null;
 
 function updateTimer() {
-    let minutes = Math.floor(time / 60);
+    let hours = Math.floor(time / 3600);
+    let minutes = Math.floor((time % 3600) / 60);
     let seconds = time % 60;
 
     document.getElementById("timer").innerText =
+        String(hours).padStart(2, "0") + ":" +
         String(minutes).padStart(2, "0") + ":" +
         String(seconds).padStart(2, "0");
 }
 
 function startTimer() {
+
     if (interval) return;
 
-    interval = setInterval(() => {
+    if (time === 0) {
+        let h = parseInt(document.getElementById("hours").value) || 0;
+        let m = parseInt(document.getElementById("minutes").value) || 0;
+
+        time = (h * 3600) + (m * 60);
+
+        if (time <= 0) {
+            alert("Please enter a valid time.");
+            return;
+        }
+    }
+
+    updateTimer();
+localStorage.setItem("timerTime", time);
+
+interval = setInterval(function () {
+
+
         if (time > 0) {
             time--;
+          localStorage.setItem("timerTime", time);
             updateTimer();
         } else {
             clearInterval(interval);
             interval = null;
             alert("🎉 Study Session Completed!");
         }
+
     }, 1000);
+}
+
+function pauseTimer() {
+    clearInterval(interval);
+    interval = null;
 }
 
 function resetTimer() {
     clearInterval(interval);
     interval = null;
-    time = 25 * 60;
+
+    let h = parseInt(document.getElementById("hours").value) || 0;
+    let m = parseInt(document.getElementById("minutes").value) || 25;
+
+    time = (h * 3600) + (m * 60);
     updateTimer();
 }
-
-updateTimer();
+resetTimer();
 
 </script>
   <script>
