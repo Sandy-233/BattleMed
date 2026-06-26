@@ -123,27 +123,31 @@ filteredQuestions[current].options[3];
 }
   function checkAnswer(choice){
 
-if(choice===filteredQuestions[current].correct){
+const ids = ["A","B","C","D"];
+
+if(choice === filteredQuestions[current].correct){
     score++;
-  xp += 10;
-localStorage.setItem("xp", xp);
-    const ids = ["A","B","C","D"];
+    xp += 10;
+    localStorage.setItem("xp", xp);
 
-document.getElementById(ids[choice]).style.background =
-choice === filteredQuestions[current].correct ? "green" : "red";
-
-document.getElementById(ids[filteredQuestions[current].correct]).style.background = "green";
+    document.getElementById(ids[choice]).style.background = "green";
+}else{
+    document.getElementById(ids[choice]).style.background = "red";
+    document.getElementById(ids[filteredQuestions[current].correct]).style.background = "green";
+}
 
 document.getElementById("score").innerHTML =
 "Score : " + score;
 
-document.getElementById("nextBtn").style.display="block";
+document.getElementById("nextBtn").style.display = "block";
 
-let buttons=document.querySelectorAll(".option");
+let buttons = document.querySelectorAll(".option");
 
 buttons.forEach(btn=>{
-    btn.style.pointerEvents="none";
+    btn.style.pointerEvents = "none";
 });
+
+  }
 
   }
   
