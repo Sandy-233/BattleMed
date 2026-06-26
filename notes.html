@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Notes</title>
+<style>
+body{
+background:#0b0f17;
+color:white;
+font-family:Arial;
+text-align:center;
+padding:30px;
+}
+textarea{
+width:90%;
+height:300px;
+padding:15px;
+font-size:16px;
+border-radius:10px;
+}
+button{
+padding:12px 25px;
+margin:10px;
+background:#00ff99;
+border:none;
+border-radius:10px;
+font-weight:bold;
+}
+a{
+color:#00ff99;
+text-decoration:none;
+}
+</style>
+</head>
+<body>
+
+<h1>📝 My Notes</h1>
+
+<textarea id="notes"></textarea>
+
+<br>
+
+<button onclick="saveNotes()">Save Notes</button>
+
+<br><br>
+
+<a href="dashboard.html">⬅ Back to Dashboard</a>
+
+<script>
+document.getElementById("notes").value =
+localStorage.getItem("notes") || "";
+
+function saveNotes(){
+localStorage.setItem(
+"notes",
+document.getElementById("notes").value
+);
+alert("Notes Saved!");
+}
+</script>
+
+</body>
+</html>
