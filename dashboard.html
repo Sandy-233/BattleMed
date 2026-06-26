@@ -202,7 +202,15 @@ color:#888;
 </div>
 
 </section>
+<div class="card">
+<h2>⏱️ Study Timer</h2>
+<h2 id="timer" style="font-size:40px;color:#00ff99;">25:00</h2>
 
+<button onclick="startTimer()" style="padding:12px 25px;margin:5px;">▶ Start</button>
+
+<button onclick="resetTimer()" style="padding:12px 25px;margin:5px;">🔄 Reset</button>
+
+</div>
 <footer>
 
 © 2026 Prahaas MedPrep ❤️
@@ -221,6 +229,47 @@ for (let i = 0; i < boxes; i++) {
 let percent = (completed / boxes) * 100;
 
 document.getElementById("pathologyBar").style.width = percent + "%";
+document.getElementById("pathologyBar").style.width = percent + "%";
+
+/* PASTE THE TIMER CODE HERE */
+
+let time = 25 * 60;
+let interval;
+
+function updateTimer() {
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    document.getElementById("timer").innerText =
+        String(minutes).padStart(2, "0") + ":" +
+        String(seconds).padStart(2, "0");
+}
+
+function startTimer() {
+    if (interval) return;
+
+    interval = setInterval(() => {
+        if (time > 0) {
+            time--;
+            updateTimer();
+        } else {
+            clearInterval(interval);
+            interval = null;
+            alert("🎉 Study Session Completed!");
+        }
+    }, 1000);
+}
+
+function resetTimer() {
+    clearInterval(interval);
+    interval = null;
+    time = 25 * 60;
+    updateTimer();
+}
+
+updateTimer();
+
+</script>
 </script>
 </body>
 </html>
