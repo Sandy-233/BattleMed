@@ -1,21 +1,314 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Prahaas MedPrep</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#090909,#111827,#021b16);
+
+color:white;
+
+min-height:100vh;
+
+}
+
+header{
+
+padding:25px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#00ffb7;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:20px;
+
+font-size:18px;
+
+}
+
+.hero{
+
+text-align:center;
+
+padding:70px 20px;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+color:#cccccc;
+
+margin-bottom:35px;
+
+}
+
+button{
+
+padding:16px 40px;
+
+font-size:18px;
+
+background:#00ff99;
+
+color:black;
+
+border:none;
+
+border-radius:12px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 30px #00ff99;
+
+}
+
+.section{
+
+padding:40px;
+
+}
+
+.section h2{
+
+margin-bottom:30px;
+
+font-size:32px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:18px;
+
+padding:30px;
+
+backdrop-filter:blur(10px);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 30px #00ff99;
+
+}
+
+.card h3{
+
+margin-bottom:12px;
+
+color:#00ffb7;
+
+}
+
+.card p{
+
+color:#cccccc;
+
+}
+
+footer{
+
+text-align:center;
+
+padding:30px;
+
+color:gray;
+
+margin-top:50px;
+
+}
+
+</style>
+
 </head>
 
-<body style="background:#0f172a; color:white; text-align:center; font-family:Arial;">
+<body>
 
-<h1>🏥 Prahaas MedPrep</h1>
+<header>
 
-<h2>Welcome 🤗 ❤️</h2>
+<div class="logo">🏥 Prahaas MedPrep</div>
 
-<p>This is my own NEET PG + USMLE Website.</p>
+<nav>
 
-<button style="padding:15px 30px;font-size:20px;border-radius:12px;background:#2563eb;color:white;border:none;">
-Login
-</button>
+<a href="#">Home</a>
+
+<a href="#">Subjects</a>
+
+<a href="#">Planner</a>
+
+<a href="#">About</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>NEET PG + USMLE Dashboard</h1>
+
+<p>Your Personal Medical Preparation Platform</p>
+
+<button>Login</button>
+
+</section>
+
+<section class="section">
+
+<h2>📚 Subjects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🧬 Pathology</h3>
+<p>General + Systemic Pathology</p>
+</div>
+
+<div class="card">
+<h3>💊 Pharmacology</h3>
+<p>Drugs & Mechanisms</p>
+</div>
+
+<div class="card">
+<h3>🦠 Microbiology</h3>
+<p>Bacteria, Virus, Fungi</p>
+</div>
+
+<div class="card">
+<h3>🩺 Medicine</h3>
+<p>Clinical Medicine</p>
+</div>
+
+<div class="card">
+<h3>🧠 Physiology</h3>
+<p>High Yield Revision</p>
+</div>
+
+<div class="card">
+<h3>🦴 Anatomy</h3>
+<p>Clinical Anatomy</p>
+</div>
+
+<div class="card">
+<h3>🌍 PSM</h3>
+<p>Preventive Medicine</p>
+</div>
+
+<div class="card">
+<h3>⚖️ FMT</h3>
+<p>Forensic Medicine</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🎯 Progress</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Subjects</h3>
+<p>0 / 19 Completed</p>
+</div>
+
+<div class="card">
+<h3>Questions Solved</h3>
+<p>0</p>
+</div>
+
+<div class="card">
+<h3>Today's Goal</h3>
+<p>100 MCQs</p>
+</div>
+
+<div class="card">
+<h3>Current Streak</h3>
+<p>0 Days</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Prahaas MedPrep | Designed by Prahaas ❤️
+
+</footer>
 
 </body>
+
 </html>
