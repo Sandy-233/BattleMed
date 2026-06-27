@@ -1,6 +1,11 @@
 // Import Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  getDoc
+} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 import {
   getAuth,
   GoogleAuthProvider,
@@ -23,8 +28,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Export services
-export const db = getFirestore(app);
+const db = getFirestore(app);
+export { db , doc , setDoc , getDoc };
 export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
-
 export { provider, signInWithPopup, signOut };
