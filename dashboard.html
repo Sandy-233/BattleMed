@@ -159,6 +159,7 @@ transform:scale(1.05);
 <a href="index.html">Home</a>
 <a href="#">Planner</a>
 <a href="#">Profile</a>
+  <button id="logoutBtn">🚪 Logout</button>
 </nav>
 
 </header>
@@ -445,7 +446,12 @@ resetTimer();
 </script>
  
   <script type="module">
-import { auth } from "./firebase.js";
+    import { signOut } from "./firebase.js";
+
+document.getElementById("logoutBtn").addEventListener("click", async () => {
+    await signOut(auth);
+    window.location.href = "login.html";
+});
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
 onAuthStateChanged(auth, (user) => {
