@@ -446,7 +446,7 @@ resetTimer();
 </script>
  
   <script type="module">
-    import { signOut } from "./firebase.js";
+    import { auth, signOut } from "./firebase.js";
 
 document.getElementById("logoutBtn").addEventListener("click", async () => {
     await signOut(auth);
