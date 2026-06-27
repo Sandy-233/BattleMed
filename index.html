@@ -311,18 +311,7 @@ margin-top:50px;
 © 2026 BattleMed | Designed by Prahaas ❤️
 
 </footer>
-  <script type="module">
-import { auth, provider, signInWithPopup } from "./firebase.js";
-
-document.getElementById("googleLogin").addEventListener("click", async () => {
-  try {
-    const result = await signInWithPopup(auth, provider);
-    alert("Welcome " + result.user.displayName + "!");
-  } catch (err) {
-    alert(err.message);
-  }
-});
-</script>
+  
 
 </body>
 
