@@ -108,17 +108,16 @@ text-decoration:none;
 </div>
     <script type="module">
 import { auth, provider, signInWithPopup } from "./firebase.js";
-
 document.getElementById("googleLogin").addEventListener("click", async () => {
   try {
-    await signInWithPopup(auth, provider);
-   const result = await signInWithPopup(auth, provider);
-console.log(result.user);
-window.location.href = "dashboard.html";
+    const result = await signInWithPopup(auth, provider);
+    console.log(result.user);
+    window.location.href = "dashboard.html";
   } catch (e) {
     alert(e.message);
   }
 });
+
 </script>
 
 </body>
