@@ -97,13 +97,8 @@ text-decoration:none;
 <h1>🏥 BattleMed</h1>
 
 <h2>Login</h2>
-
-<input type="text" placeholder="Username">
-
-<input type="password" placeholder="Password">
-
-<button onclick="window.location.href='dashboard.html'">
-    Login
+<button id="googleLogin">
+🔐 Sign in with Google
 </button>
 
 <br><br>
@@ -111,6 +106,18 @@ text-decoration:none;
 <a href="index.html">⬅ Back to Home</a>
 
 </div>
+    <script type="module">
+import { auth, provider, signInWithPopup } from "./firebase.js";
+
+document.getElementById("googleLogin").addEventListener("click", async () => {
+  try {
+    await signInWithPopup(auth, provider);
+    window.location.href = "index.html";
+  } catch (e) {
+    alert(e.message);
+  }
+});
+</script>
 
 </body>
 </html>
