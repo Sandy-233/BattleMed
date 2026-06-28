@@ -39,17 +39,15 @@ const db = getFirestore(app);
 const storage = getStorage(app);
 export { db , doc , setDoc , getDoc };
 export const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
+export const provider = new GoogleAuthProvider();
 
 export {
-auth,
 db,
 storage,
 ref,
 uploadBytes,
 getDownloadURL,
 listAll,
-provider,
-googleAuthProvider,
+signInWithPopup,
 signOut
 };
