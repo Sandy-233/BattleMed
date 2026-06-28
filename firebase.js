@@ -12,6 +12,13 @@ import {
   signInWithPopup,
   signOut
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+import {
+  getStorage,
+  ref,
+  uploadBytes,
+  getDownloadURL,
+  listAll
+} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-storage.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -29,7 +36,20 @@ const app = initializeApp(firebaseConfig);
 
 // Export services
 const db = getFirestore(app);
+const storage = getStorage(app);
 export { db , doc , setDoc , getDoc };
 export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
-export { provider, signInWithPopup, signOut };
+
+export {
+auth,
+db,
+storage,
+ref,
+uploadBytes,
+getDownloadURL,
+listAll,
+provider,
+googleAuthProvider,
+signOut
+};
