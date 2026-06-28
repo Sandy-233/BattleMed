@@ -40,8 +40,9 @@ const storage = getStorage(app);
 export { db , doc , setDoc , getDoc };
 export const auth = getAuth(app);
 export const provider = new GoogleAuthProvider();
-
 export {
+auth,
+provider,
 db,
 storage,
 ref,
