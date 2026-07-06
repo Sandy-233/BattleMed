@@ -11007,5 +11007,6 @@ correct:1,
 explanation:"Ivabradine inhibits the funny (If) current in the SA node, slowing phase 4 depolarization without reducing myocardial contractility."
 },
 ];
+window.cardiologyMCQs = cardiovascularEmbryologyMCQs;
 
   
