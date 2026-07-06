@@ -24,7 +24,7 @@ options:[
 ],
 correct:1,
 explanation:"Cardiac looping establishes the normal left-right orientation of the heart."
-}
+},
 
 {
 id:6,
@@ -11006,6 +11006,6 @@ correct:1,
 explanation:"Ivabradine inhibits the funny (If) current in the SA node, slowing phase 4 depolarization without reducing myocardial contractility."
 },
 ];
-window.cardiologyMCQs = cardiovascularEmbryologyMCQs;
+
 
   
