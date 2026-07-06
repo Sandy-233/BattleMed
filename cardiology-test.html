@@ -54,8 +54,21 @@ Loading Question...
 </div>
 
 </div>
-
 <script src="mcqs/Cardiology.js"></script>
 
+<script>
+
+const firstQuestion = window.cardiologyMCQs[0];
+
+document.querySelector(".question").innerHTML =
+`
+<h2>Question 1</h2>
+
+<p>${firstQuestion.question}</p>
+`;
+
+</script>
+
 </body>
+
 </html>
