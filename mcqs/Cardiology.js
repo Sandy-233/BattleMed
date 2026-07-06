@@ -26,7 +26,6 @@ correct:1,
 explanation:"Cardiac looping establishes the normal left-right orientation of the heart."
 }
 
-];
 {
 id:6,
 question:"The first functional organ to develop in the embryo is:",
