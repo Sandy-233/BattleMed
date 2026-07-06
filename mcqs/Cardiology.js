@@ -1,4 +1,4 @@
-const cardiovascularEmbryologyMCQs = [
+window.cardiologyMCQs = [
 
 {
 id:1,
