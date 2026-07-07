@@ -54,9 +54,18 @@ Loading Question...
 </div>
 
 </div>
+<script src="mcqs/Cardiology.js"></script>
+
 <script>
-document.querySelector(".question").innerHTML = "JavaScript is running";
+if (window.cardiologyMCQs) {
+    document.querySelector(".question").innerHTML =
+        "Questions loaded: " + window.cardiologyMCQs.length;
+} else {
+    document.querySelector(".question").innerHTML =
+        "cardiologyMCQs is NOT defined";
+}
 </script>
+
 </body>
 </html>
     
