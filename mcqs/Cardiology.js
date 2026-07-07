@@ -144,7 +144,7 @@ options:[
 ],
 correct:2,
 explanation:"PFO occurs when septum primum and septum secundum fail to fuse after birth."
-}
+},
 {
 id:16,
 question:"Which embryonic structure separates the primitive atria?",
@@ -273,7 +273,7 @@ options:[
 ],
 correct:0,
 explanation:"Abnormal septation of the atria can produce atrial septal defects."
-}
+},
 {
 id:26,
 question:"The embryonic heart begins to beat spontaneously during:",
@@ -519,14 +519,6 @@ options:[
 correct:1,
 explanation:"Fusion of the two septa forms the definitive atrial septum."
 },
-
-{
-id:45,
-question:"Which of the following best describes Patent Foramen Ovale (PFO)?",
-options:[
-"A cyanotic congenital heart disease",
-"A persistent fetal communication between the atria due to septal failure 
-}, 
 {
 id:46,
 question:"How many major physiological shunts are present in fetal circulation?",
@@ -901,19 +893,6 @@ options:[
 ],
 correct:0,
 explanation:"Endocardial cushions divide the atrioventricular canal."
-},
-
-{
-id:75,
-question:"The embryological origin of the membranous interventricular septum includes contribution from:",
-options:[
-"Neural crest-derived aorticopulmonary septum",
-"Only muscular septum",
-"Only septum primum",
-"Only septum secundum"
-],
-correct:0,
-explanation:"The membranous septum forms from fusion involving the neural crest-derived aorticopulmonary
 },
 {
 id:76,
